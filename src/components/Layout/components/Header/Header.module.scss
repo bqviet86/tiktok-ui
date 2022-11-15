@@ -1,0 +1,120 @@
+.wrapper {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    width: 1150px;
+    height: 100%;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.search,
+.search-result {
+    width: 364.5px;
+}
+
+.search {
+    position: relative;
+    padding: 12px 53.5px 12px 16px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border-radius: 92px;
+    background-color: #f1f1f2;
+    border: 1.5px solid transparent;
+
+    input {
+        width: 252px;
+        height: 22px;
+        font-family: 'IBM Plex Sans', ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+        font-size: 1.6rem;
+        caret-color: var(--primary);
+        background-color: transparent;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: #55575f;
+    }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.clear-load-wrap {
+    position: relative;
+    width: 40px;
+}
+
+.clear,
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 16px;
+    font-size: 1.6rem;
+    color: #a7a7ab;
+    transform: translate(-50%, -50%);
+}
+
+.search-btn {
+    position: absolute;
+    inset: -1px -1px -1px auto;
+    padding: 11px 16px 11px 12px;
+    display: flex;
+    font-size: 2.4rem;
+    color: #a9a9ad;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+
+    &:hover {
+        background-color: #eaeaeb;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #e4e4e6;
+    }
+
+    span {
+        position: absolute;
+        top: 9px;
+        right: 100%;
+        width: 1.5px;
+        height: calc(100% - 18px);
+        background-color: #d7d7d9;
+    }
+}
+
+.search-title {
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.see-more-icon {
+    margin-left: 16px;
+    padding: 0 4px;
+    width: 28px;
+    height: 20px;
+    color: var(--text-color);
+}
