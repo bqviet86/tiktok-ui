@@ -31,8 +31,7 @@
 
     &.iconLeft :first-child,
     &.iconRight :last-child {
-        width: 20px;
-        height: 20px;
+        font-size: 20px;
     }
 
     &.iconLeft span {
