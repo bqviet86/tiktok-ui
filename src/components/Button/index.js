@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import classNames from 'classnames/bind'
 
@@ -12,7 +13,7 @@ function Button({
     outline = false,
     rounded = false,
     size = 'md',
-    disabled,
+    disabled = false,
     IconLeft = '',
     IconRight = '',
     className,
@@ -61,6 +62,20 @@ function Button({
             {IconRight}
         </Comp>
     )
+}
+
+Button.propTypes = {
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    rounded: PropTypes.bool,
+    size: PropTypes.string,
+    disabled: PropTypes.bool,
+    IconLeft: PropTypes.node,
+    IconRight: PropTypes.node,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
 }
 
 export default Button

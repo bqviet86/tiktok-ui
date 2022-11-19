@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Tippy from '@tippyjs/react/headless'
 import classNames from 'classnames/bind'
 
@@ -32,6 +33,12 @@ function Tooltip({ children, content = '', bg = '#fff' }) {
             </Tippy>
         </div>
     )
+}
+
+Tooltip.propTypes = {
+    children: PropTypes.node.isRequired,
+    content: PropTypes.node.isRequired,
+    bg: PropTypes.string,
 }
 
 export default Tooltip

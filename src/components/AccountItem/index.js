@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Icon } from '@iconify/react'
 import { Link } from 'react-router-dom'
 import classNames from 'classnames/bind'
@@ -20,6 +21,10 @@ function AccountItem({ data }) {
             </div>
         </Link>
     )
+}
+
+AccountItem.propTypes = {
+    data: PropTypes.object.isRequired,
 }
 
 export default AccountItem
