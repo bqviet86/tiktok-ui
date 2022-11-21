@@ -95,7 +95,7 @@ function Header() {
                 <Search />
 
                 <div className={cx('actions')}>
-                    <Button size="md2" IconLeft={<Icon icon="ion:add" />}>
+                    <Button to={config.upload} size="md2" IconLeft={<Icon icon="ion:add" />}>
                         Tải lên
                     </Button>
                     {currentUser ? (
